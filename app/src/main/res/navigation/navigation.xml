@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/travelListFragment">
+
+    <fragment
+        android:id="@+id/travelListFragment"
+        android:name="com.example.testwildberries.ui.TravelListFragment"
+        android:label="fragment_travel_list"
+        tools:layout="@layout/fragment_travel_list" >
+        <action
+            android:id="@+id/action_travelListFragment_to_detailsAboutTravelFragment"
+            app:destination="@id/detailsAboutTravelFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsAboutTravelFragment"
+        android:name="com.example.testwildberries.ui.DetailsAboutTravelFragment"
+        android:label="fragment_details_about_travel"
+        tools:layout="@layout/fragment_details_about_travel" >
+        <argument
+            android:name="detailsTravel"
+            app:argType="com.example.testwildberries.model.Travel" />
+    </fragment>
+</navigation>

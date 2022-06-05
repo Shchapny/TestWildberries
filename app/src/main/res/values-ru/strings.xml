@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TestWildberries</string>
+    <string name="price">%1$s ₽</string>
+    <string name="route">%1$s -> %2$s</string>
+    <string name="days">%1$s - %2$s</string>
+    <string name="chronodays">%1$s дней в пути</string>
+    <string name="departure">Отправление:</string>
+    <string name="arrival">Прибытие:</string>
+    <string name="error_loading">Ошибка подключения</string>
+    <string name="retry">Повторить</string>
+    <string name="details_city">%1$s (%2$s)</string>
+    <string name="details_travel">О путешествии</string>
+    <string name="list_travel">Выберите путешествие</string>
+
+</resources>

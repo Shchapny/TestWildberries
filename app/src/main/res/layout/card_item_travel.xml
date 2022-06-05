@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/offset"
+    app:cardCornerRadius="@dimen/card_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/offset">
+
+        <TextView
+            android:id="@+id/text_price"
+            style="@style/TextPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3500 ₽" />
+
+        <ImageView
+            android:id="@+id/imageLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_image"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="@+id/text_price"
+            app:layout_constraintTop_toBottomOf="@+id/text_price" />
+
+        <ImageView
+            android:id="@+id/imageStartFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_image"
+            android:src="@drawable/ic_start_finish"
+            app:layout_constraintStart_toStartOf="@+id/imageLocation"
+            app:layout_constraintTop_toBottomOf="@+id/imageLocation" />
+
+        <ImageView
+            android:id="@+id/imageChronodays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_image"
+            android:src="@drawable/ic_chronodays"
+            app:layout_constraintStart_toStartOf="@+id/imageLocation"
+            app:layout_constraintTop_toBottomOf="@+id/imageStartFinish" />
+
+        <TextView
+            android:id="@+id/text_route"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/offset"
+            android:textSize="@dimen/text_size_city"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/imageLocation"
+            app:layout_constraintStart_toEndOf="@+id/imageLocation"
+            app:layout_constraintTop_toTopOf="@+id/imageLocation"
+            tools:text="Москва -> Санкт-Петербург" />
+
+        <TextView
+            android:id="@+id/text_start_and_finish_days"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/offset"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/imageStartFinish"
+            app:layout_constraintStart_toEndOf="@+id/imageStartFinish"
+            app:layout_constraintTop_toTopOf="@+id/imageStartFinish"
+            tools:text="01 июн. 2022 г. - 15 июн. 2022 г." />
+
+        <TextView
+            android:id="@+id/text_chronodays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/offset"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/imageChronodays"
+            app:layout_constraintStart_toEndOf="@+id/imageChronodays"
+            app:layout_constraintTop_toTopOf="@+id/imageChronodays"
+            tools:text="14 дней в пути" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_like"
+            style="@style/LikeButton"
+            app:layout_constraintBottom_toBottomOf="@+id/imageChronodays"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageStartFinish" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

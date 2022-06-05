@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="offset">10dp</dimen>
+    <dimen name="text_size_price">24sp</dimen>
+    <dimen name="offset_image">4dp</dimen>
+    <dimen name="text_size_location">18sp</dimen>
+    <dimen name="size_like">40dp</dimen>
+    <dimen name="text_size_city">18sp</dimen>
+    <dimen name="offset_price_details">20dp</dimen>
+</resources>

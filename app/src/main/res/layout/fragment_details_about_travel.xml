@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailsAboutTravelFragment">
+
+    <Toolbar
+        android:id="@+id/toolbar_details"
+        style="@style/Toolbar"
+        android:navigationIcon="@drawable/ic_back"
+        android:title="@string/details_travel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_price"
+        style="@style/TextPrice"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/offset_price_details"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/button_like"
+        app:layout_constraintEnd_toStartOf="@id/button_like"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_like"
+        tools:text="3500 ₽" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_like"
+        style="@style/LikeButton"
+        android:layout_margin="@dimen/offset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_details" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/offset"
+        app:cardBackgroundColor="@color/purple_50"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_like">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/offset">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/departure" />
+
+            <TextView
+                android:id="@+id/text_date_departure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/offset"
+                android:textColor="@color/black"
+                tools:text="01 февраля. 2022 г." />
+
+            <TextView
+                android:id="@+id/text_start_location"
+                style="@style/TextLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Москва (MOW)" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/offset"
+                android:background="@color/wildberries"
+                app:layout_constraintTop_toBottomOf="@+id/text_price" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/arrival" />
+
+            <TextView
+                android:id="@+id/text_date_arrival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/offset"
+                android:textColor="@color/black"
+                tools:text="07 февраля 2022 г." />
+
+            <TextView
+                android:id="@+id/text_end_location"
+                style="@style/TextLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                tools:text="Самара (KUF)" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
